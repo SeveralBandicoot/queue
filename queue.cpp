@@ -11,8 +11,6 @@ Objectives:
 
     What are some simple examples of a Queue? 
 
- 
-
     Write a program and create an integer Queue and load 20, 30, 40 & 50
 
     Create a Loop that will display the values
@@ -29,7 +27,7 @@ Objectives:
 
 using namespace std;
 
-void displayQueue(queue<int> numbers);
+void display(queue<int> numbers);
 int main() {
     queue<int> numbers; // integer queue initalization
     numbers.push(20);
@@ -37,13 +35,14 @@ int main() {
     numbers.push(40);
     numbers.push(50);
 
+    //numbers.pop();
 
-    displayQueue(numbers);
+    display(numbers);
 
     return 0;
 }
 
-void displayQueue(queue<int> numbers) {
+void display(queue<int> numbers) {
     while(!numbers.empty()) { // while the numbers queue is not empty
         cout << "\n" << numbers.front(); // print the front 
         numbers.pop(); // pop the front 
